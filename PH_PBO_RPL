@@ -37,3 +37,71 @@ fun main() {
         i++
     }
 }
+
+//==========================================
+//Inheritance program
+//==========================================
+open class Object_Data{
+    //Object
+    var position_x: Int = 0
+    var position_y: Int = 0
+    var weight: Int = 0
+    //Weapon
+    var weapon_name: String = ""
+    var damage: Int =0
+    var succes_message: String = ""
+    var failure_message: String = ""
+    //Agent
+    var health: Int = 0
+    var strenght: Int = 0
+    var name: String = ""
+    //Enemny
+    var strategy_id: Int = 0
+    //Player
+    var id : Int = 0
+}
+class Player: Object_Data(){}
+class Weapon: Object_Data(){}
+
+fun main() {
+    val entitityweapon_pedang = Weapon()
+    entitityweapon_pedang.weapon_name = "Pedang"
+    entitityweapon_pedang.damage = 5
+    entitityweapon_pedang.succes_message = "Serangan pedang Sukses"
+    entitityweapon_pedang.failure_message = "Serangan pedang Gagal"
+    
+    val entitityweapon_tombak = Weapon()
+    entitityweapon_tombak.weapon_name = "Tombak"
+    entitityweapon_tombak.damage = 10
+    entitityweapon_tombak.succes_message = "Serangan tombak Sukses"
+    entitityweapon_tombak.failure_message = "Serangan tombak Gagal"
+    
+    val entitityweapon_panah = Weapon()
+    entitityweapon_panah.weapon_name = "Panah"
+    entitityweapon_panah.damage = 15
+    entitityweapon_panah.succes_message = "Serangan panah Sukses"
+    entitityweapon_panah.failure_message = "Serangan panah Gagal"
+    
+    val entityplayer = Player()
+    entityplayer.position_x = 10
+    entityplayer.position_y = 20
+    entityplayer.weight = 50
+    entityplayer.health = 100
+    entityplayer.strenght = 100
+    entityplayer.name = "Kirito"
+    entityplayer.strategy_id = 20
+    entityplayer.id = 1
+    
+    println("Player Id : ${entityplayer.id}")
+    println("Name Player : ${entityplayer.name}")
+    println("Health Player : ${entityplayer.health}")
+    println("Weight Player : ${entityplayer.weight}")
+    println("Strenght Player : ${entityplayer.strenght}")
+    println("Position X Player : ${entityplayer.position_x}")
+    println("Position Y Player : ${entityplayer.position_y}")
+    println("Strategy ID Player : ${entityplayer.strategy_id}")
+    println("Player Weapon : ${entitityweapon_pedang.weapon_name}")
+    println("Player Weapon Damage : ${entitityweapon_pedang.damage}")
+    println("Player Weapon Message: ${entitityweapon_pedang.succes_message}")
+    
+}
