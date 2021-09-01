@@ -1,0 +1,2 @@
+Insert To Table:
+INSERT INTO `tbl_user` (`nama_pengguna`, `password`) VALUES ('user001', 'admin123');
