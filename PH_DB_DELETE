@@ -1,0 +1,2 @@
+Delete Data in table :
+DELETE FROM tbl_user WHERE nama_pengguna = 'user004';
