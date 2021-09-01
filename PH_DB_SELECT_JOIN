@@ -1,0 +1,4 @@
+Query Select Join
+
+SELECT tbl_mapel.id_mapel,tbl_mapel.mapel, tbl_mengajar.nip FROM tbl_mapel
+INNER JOIN tbl_mengajar ON tbl_mapel.id_mapel = tbl_mengajar.id_mapel;
