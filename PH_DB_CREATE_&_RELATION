@@ -1,0 +1,16 @@
+Create Table : 
+CREATE TABLE tbl_mengajar(
+nip CHAR(11),
+id_mapel CHAR(10)
+);
+
+CREATE TABLE tbl_mapel(
+id_mapel CHAR(10),
+mapel TEXT,
+PRIMARY KEY (id_mapel)
+);
+
+Relation Table :
+ALTER TABLE tbl_mengajar
+ADD CONSTRAINT fk_tblmengajar_to_tblmapel
+FOREIGN KEY (id_mapel) REFERENCES tbl_mapel(id_mapel);
