@@ -1,0 +1,5 @@
+Update Data in tbl_siswa :
+
+UPDATE tbl_siswa
+SET nama = 'Tania Karantina'
+WHERE nama = 'Tania Karantini';
