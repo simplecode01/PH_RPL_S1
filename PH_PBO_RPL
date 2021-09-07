@@ -61,6 +61,66 @@ fun main() {
 //==========================================
 //Inheritance program
 //==========================================
+open class Object_Data{
+    //Object
+    var position_x: Int = 0
+    var position_y: Int = 0
+    var weight: Int = 0
+}
+class Weapon: Object_Data(){
+	//Weapon
+    var damage: Int =0
+    var succes_message: String = ""
+    var failure_message: String = ""
+}
+open class Agent_Data:Object_Data(){
+    //Agent
+    var health: Int = 0
+    var strenght: Int = 0
+    var name: String = ""
+    var weapon: Weapon = Weapon()
+}
+class Player: Agent_Data(){
+    //Player
+    var id : Int = 0
+}
+class Enemy: Agent_Data(){
+    //Enemny
+    var strategy_id: Int = 0
+}
 
+
+fun main() {
+    val entityobject = Object_Data()
+    entityobject.position_x = 10
+    entityobject.position_y = 20
+    entityobject.weight = 100
+    
+    val entityagent = Agent_Data()
+    entityagent.health = 10
+    entityagent.strenght = 100
+    entityagent.name= "Kirito"
+    val weapon=entityagent.weapon
+    weapon.damage = 10
+    weapon.succes_message="Serangan Sukses"
+    
+    
+    val entityplayer = Player()
+    entityplayer.id = 10
+    
+    val entityenyme = Enemy()
+    entityenyme.strategy_id = 10
+   
+    
+    println("Player Id : ${entityplayer.id}")
+    println("Name Player : ${entityagent.name}")
+    println("Health Player : ${entityagent.health}")
+    println("Weight Player : ${entityobject.weight}")
+    println("Strenght Player : ${entityagent.strenght}")
+    println("Position X Player : ${entityobject.position_x}")
+    println("Position Y Player : ${entityobject.position_y}")
+    println("Strategy ID Player : ${entityenyme.strategy_id}")
+    println("Player Weapon Damage : ${weapon.damage}")
+    println("Player Weapon Message:${weapon.succes_message}")
     
 }
